@@ -267,6 +267,14 @@ If you finish the Lab, try this challenge.
 
 Write a function that will add, subtract, multiply or divide two numbers and return the answer 
 ```js
+const calculator = function(num1,num2, operation){
+  if (isNaN(num1) || isNaN(num2)){return 'calculator only accepts numbers';}
+  if (operation === 'add'){ return num1 + num2;}
+  if (operation === 'subtract'){ return num1 - num2;}
+  if (operation === 'divide'){ return num1 / num2;}
+  if (operation === 'multiply'){ return num1 * num2;}
+  if (operation === 'something else'){ return 'calculator can only add, subtract, divide, or multiply';}
+}
 calculator(1, 2, "add") // should return 3 
 calculator(1, 2, "subtract") // should return -1
 calculator(1, 2, "divide") // should return .5
@@ -306,6 +314,19 @@ If the number contains 7 as a factor, output 'Plong'.
 If the number does not contain 3, 5, or 7 as a factor, output the number as a string.
 
 ```js
+const rainDrop = function(num){
+let resultOutput = '';
+if (num % 3 === 0) 
+	{resultOutput += 'Pling';}
+if (num % 5 === 0) 
+	{resultOutput += 'Plang';}
+if (num % 7 === 0) 
+	{resultOutput += 'Plong';}
+return(resultOutput || num.toString()); 
+}
+
+//In case values were added to resultOutput then it will be truthy and print it. Otherwise, it will be falsey and print the second one (num.toString(num)).
+console.log(resultOutput || num.toString(num)); 
 rainDrop(28) // Plong
 rainDrop(1755) // PlingPlang
 rainDrop(34) // 34
