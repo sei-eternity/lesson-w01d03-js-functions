@@ -227,24 +227,36 @@ Create a file named `functions.js`.
 
 1.  Define a `youRock` function that accepts a string argument of a name and returns a string using that name.
 ```js
+const youRock = function(name){
+  return(`You Rock ${name} !`);
+}
 youRock('Marc') // 'You rock Marc!'
 youRock('Alanoud') //'You rock Alanoud!'
 ```
 
 2.  Define a `square` function that accepts a number argument and returns that number multiplied by itself.
 ```js
+const square = function(num){
+  return num*num;
+}
 square(2) // 4
 square(3) // 9
 ```
 
 3.  Define a `cube` function that accepts a number argument and returns that number raised to the third power.
 ```js
+const cube = function(num){
+  return num*num*num;
+}
 cube(2) // 8
 cube(3) // 27
 ```
 
 4.  Define a `toTheFourth` function that accepts a number argument and returns that number raised to the fourth power.
 ```js
+const toTheFourth = function(num){
+  return num*num*num*num;
+}
 toTheFourth(2) // 16
 toTheFourth(3) // 81
 ```
