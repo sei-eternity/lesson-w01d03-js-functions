@@ -309,3 +309,86 @@ rainDrop(34) // 34
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
+    // const printHello = function(name){
+//   console.log("Hello " +name);
+// }
+// printHello("Abdullah");
+
+// const add = function(num1,num2){
+//   console.log(num1 +num2);
+// }
+// add(40,2);
+// add(49,2);
+// const subtract = function(num1,num2){
+//   console.log(num1 - num2);
+// }
+// subtract(10,6);
+// const five = function(){
+//   return 2+3;
+// }
+// let newFive = five();
+// newFive
+// const allowedToDrive = function(age) {
+//   if(age<18) {
+//     return false;
+//   } else{
+//     return true;
+//   }
+// }
+// allowedToDrive(17);
+// const youRock = function(name){
+//   console.log("You rock"+ name);
+// }
+// youRock(" Abdullah");
+
+// const square = function(num){
+//   console.log(num*num);
+// }
+// square(5);
+
+// const cube = function(num2){
+//   console.log(num2*num2*num2);
+// }
+// cube(5);
+// const toTheFourth = function(num){
+//   console.log(num*num*num*num);
+// }
+// toTheFourth(5)
+
+const calculator = function(num1,num2,op){
+  if(op !=="add"&& op !=="subtract"&& op !=="divide"&&op !=="multiply"){
+    console.log("calculator can only add, subtract, divide, or multiply")
+
+  }else if(isNaN(num1||num2)){
+    console.log("calculator only accepts numbers")
+  }
+  else if(op ==="add"){
+    console.log(num1+num2)
+  }else if(op === "subtract"){
+    console.log(num1-num2);
+
+  }else if(op === "divide"){
+    console.log(num1/num2);
+
+  }
+  else if(op === "multiply"){
+    console.log(num1*num2);
+
+  }
+}
+calculator(7,5,"add")
+
+const rainDrop = function(num){
+  let output="";
+  if(num%3 ==0){
+    output+="Pling" 
+  }
+  if (num%5 ==0){
+    output+="Plang"
+  }
+  if(num%7 ==0){
+    output+="Plong"
+  }
+  console.log(output||num);
+}
+rainDrop(15);
