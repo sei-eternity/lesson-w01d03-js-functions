@@ -1,0 +1,125 @@
+1.Allowed to drive function:
+
+const allowedtodrive = function(age){
+	if (age < 18) { 
+	return 'sorry cant drive';
+    } else {
+		return 'you can drive';
+    }
+}
+
+allowedtodrive(18)
+"you can drive"
+
+
+2.Allowedtodrive with Boolean 
+
+const isallowedtodrive = function(age){
+	if (age < 18) { 
+	return false;
+    } else {
+		return true;
+    }
+}
+
+isallowedtodrive(21)
+true
+
+3.full name function
+
+const fullname = function(firstname, lastname) {
+	return ` ${firstname} ${lastname} `;
+} 
+
+fullname('mo','asslahi')
+" mo asslahi "
+
+
+
+Practice
+
+1.const yourock = function(name) {
+	return 'you rock' + name;
+}
+
+yourock('mo ')
+"you rockmo "
+
+
+
+
+2.const square = function(num) {
+	return num * num ;
+}
+
+square(3)
+9
+
+
+
+
+3.const cube = function(num) {
+	return num * num * num;
+}
+cube(2)
+8
+
+
+4.const fourth = function(num) {
+	return num * num * num * num;
+}
+undefined
+fourth(2)
+16
+
+
+
+3.Write a function that will add, subtract, multiply or divide two numbers and return the answer
+
+const calculator = function(num1, num2, operator) {
+
+	if (operator === "add") {return num1 + num2;}
+	else if (operator === "subtract") {return num1 - num2;}
+	else if (operator === "multiply") {return num1 * num2;}
+else if (operator === "divide") {return num1 / num2;}
+
+}
+
+
+4.Write a function that accepts an argument of a number
+If the number contains 3 as a factor, output 'Pling'.
+If the number contains 5 as a factor, output 'Plang'.
+If the number contains 7 as a factor, output 'Plong'.
+If the number does not contain 3, 5, or 7 as a factor, output the number as a strin
+
+
+function rainDrop(num){
+    let num1=3;
+    let num2=5;
+    let num3=7;
+    let output = "";
+    if(num%num1==0){output += 'Pling';}
+    if(num%num2==0){output += 'Plang';}
+    if(num%num3==0){output += 'Plong';}
+    
+    return     console.log(output || num.toString());    
+}
+rainDrop(9)
+Pling
+
+fizzbuzz code 
+
+function fizzbuzz(num){
+    
+    let output = "";
+	if(num%5 ==0 && num%3 ==0 ){return 'fuzzbuzz';}
+    else if(num%3 ==0){return 'fizz';}
+    else if(num%5 ==0){return 'buzz';}
+    
+    
+    return     console.log(output);    
+}
+
+undefined
+fizzbuzz(15)
+"fuzzbuzz"
