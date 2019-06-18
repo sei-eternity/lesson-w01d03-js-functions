@@ -230,25 +230,51 @@ Create a file named `functions.js`.
 youRock('Marc') // 'You rock Marc!'
 youRock('Alanoud') //'You rock Alanoud!'
 ```
+function youRock(name){
+
+console.log("You rock "+name);
+}
+
+
+youRock('Marc'); // 'You rock Marc!'
+youRock('Alanoud'); //'You rock Alanoud!'
 
 2.  Define a `square` function that accepts a number argument and returns that number multiplied by itself.
 ```js
 square(2) // 4
 square(3) // 9
 ```
+function square(n){
+return n*n;
 
+}
+
+
+square(2);
 3.  Define a `cube` function that accepts a number argument and returns that number raised to the third power.
 ```js
 cube(2) // 8
 cube(3) // 27
 ```
+function cube(n){
+return n*n*n;
 
+}
+
+
+cube(2);
 4.  Define a `toTheFourth` function that accepts a number argument and returns that number raised to the fourth power.
 ```js
 toTheFourth(2) // 16
 toTheFourth(3) // 81
 ```
+function toTheFourth(n){
+return n*n*n*n;
 
+}
+
+
+toTheFourth(2);
 #### Extra Practice
 
 If you finish the Lab, try this challenge.
@@ -262,7 +288,12 @@ calculator(1, 2, "multiply") // should return 2
 calculator(1, 2, "something else") // should return "calculator can only add, subtract, divide, or multiply
 calculator("cat", 2, "add") // should return "calculator only accepts numbers"
 ```
-
+function add(n,m){return n+m;}
+function subtract(n,m){return n-m;}
+function divide(n,m){return n/m;}
+function multiply(n,m){return n*m;}
+function something_else(n,m){console.log( "calculator can only add, subtract, divide, or multiply");}
+add(8,7);
 ### Lab: FizzBuzz Function
 
 Write a function that accepts an argument of a number
@@ -280,7 +311,17 @@ fizzBuzz(3) // Fizz
 fizzBuzz(15) // FizzBuzz
 rainDrop(7) // 7
 ```
+function fizzBuzz(num){
+if (num%15==0) {console.log("FizzBuzz");}
+else  if (num%3==0){console.log("Fizz");}
+else if (num%5==0) {console.log("Buzz");}
+else  {console.log(num);}
+}
 
+
+fizzBuzz(3) ;// Fizz
+fizzBuzz(15); // FizzBuzz
+rainDrop(7);
 ### Lab: RainDrop Function
 
 Write a function that accepts an argument of a number
@@ -298,6 +339,14 @@ rainDrop(28) // Plong
 rainDrop(1755) // PlingPlang
 rainDrop(34) // 34
 ```
+function rainDrop(num){
+if (num%15==0) {console.log("PlingPlang");}
+else  if (num%3==0){console.log("Pling");}
+else if (num%5==0) {console.log("Plang");}
+else if (num%7==0) {console.log("Plong");}
+else  {console.log(num);}
+}
+rainDrop(1755);
 
 ## Additional Resources
 
