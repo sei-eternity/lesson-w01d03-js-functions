@@ -227,24 +227,36 @@ Create a file named `functions.js`.
 
 1.  Define a `youRock` function that accepts a string argument of a name and returns a string using that name.
 ```js
+const youRock = function(name){
+  return(`You Rock ${name} !`);
+}
 youRock('Marc') // 'You rock Marc!'
 youRock('Alanoud') //'You rock Alanoud!'
 ```
 
 2.  Define a `square` function that accepts a number argument and returns that number multiplied by itself.
 ```js
+const square = function(num){
+  return num*num;
+}
 square(2) // 4
 square(3) // 9
 ```
 
 3.  Define a `cube` function that accepts a number argument and returns that number raised to the third power.
 ```js
+const cube = function(num){
+  return num*num*num;
+}
 cube(2) // 8
 cube(3) // 27
 ```
 
 4.  Define a `toTheFourth` function that accepts a number argument and returns that number raised to the fourth power.
 ```js
+const toTheFourth = function(num){
+  return num*num*num*num;
+}
 toTheFourth(2) // 16
 toTheFourth(3) // 81
 ```
@@ -255,6 +267,14 @@ If you finish the Lab, try this challenge.
 
 Write a function that will add, subtract, multiply or divide two numbers and return the answer 
 ```js
+const calculator = function(num1,num2, operation){
+  if (isNaN(num1) || isNaN(num2)){return 'calculator only accepts numbers';}
+  if (operation === 'add'){ return num1 + num2;}
+  if (operation === 'subtract'){ return num1 - num2;}
+  if (operation === 'divide'){ return num1 / num2;}
+  if (operation === 'multiply'){ return num1 * num2;}
+  if (operation === 'something else'){ return 'calculator can only add, subtract, divide, or multiply';}
+}
 calculator(1, 2, "add") // should return 3 
 calculator(1, 2, "subtract") // should return -1
 calculator(1, 2, "divide") // should return .5
@@ -276,6 +296,13 @@ If it is a multiple of both 3 and 5, return “FizzBuzz” instead of the number
 Otherwise, return the number
 
 ```js
+const fizzBuzz = function(num){
+  if(num % 3 === 0 && num % 5 === 0) {return 'FizzBuzz'}
+  if(num % 3 != 0 && num % 5 != 0) {return num;}
+  if(num % 3 === 0) {return 'Fizz';}
+  if(num % 5 === 0) {return 'Buzz';}
+}
+  
 fizzBuzz(3) // Fizz
 fizzBuzz(15) // FizzBuzz
 rainDrop(7) // 7
@@ -294,6 +321,19 @@ If the number contains 7 as a factor, output 'Plong'.
 If the number does not contain 3, 5, or 7 as a factor, output the number as a string.
 
 ```js
+const rainDrop = function(num){
+let resultOutput = '';
+if (num % 3 === 0) 
+	{resultOutput += 'Pling';}
+if (num % 5 === 0) 
+	{resultOutput += 'Plang';}
+if (num % 7 === 0) 
+	{resultOutput += 'Plong';}
+return(resultOutput || num.toString()); 
+}
+
+//In case values were added to resultOutput then it will be truthy and print it. Otherwise, it will be falsey and print the second one (num.toString(num)).
+console.log(resultOutput || num.toString(num)); 
 rainDrop(28) // Plong
 rainDrop(1755) // PlingPlang
 rainDrop(34) // 34
