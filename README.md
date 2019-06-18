@@ -229,23 +229,49 @@ Create a file named `functions.js`.
 ```js
 youRock('Marc') // 'You rock Marc!'
 youRock('Alanoud') //'You rock Alanoud!'
+
+const youRock = function (name)
+{
+return "You rock " + name;
+}
+youRock("Munira")
+
 ```
 
 2.  Define a `square` function that accepts a number argument and returns that number multiplied by itself.
 ```js
-square(2) // 4
+square(2) 
+const square= function(num1)
+{ 
+return num1*num1;
+}
+
+// 4
 square(3) // 9
 ```
 
 3.  Define a `cube` function that accepts a number argument and returns that number raised to the third power.
 ```js
-cube(2) // 8
+cube(2) 
+const cube= function(num1)
+{ 
+return num1*num1*num1;
+}
+
+// 8
 cube(3) // 27
 ```
 
 4.  Define a `toTheFourth` function that accepts a number argument and returns that number raised to the fourth power.
 ```js
-toTheFourth(2) // 16
+toTheFourth(2)
+
+const toTheFourth= function(num1)
+{ 
+return num1*num1*num1*num1;
+}
+
+ // 16
 toTheFourth(3) // 81
 ```
 
@@ -255,13 +281,48 @@ If you finish the Lab, try this challenge.
 
 Write a function that will add, subtract, multiply or divide two numbers and return the answer 
 ```js
-calculator(1, 2, "add") // should return 3 
-calculator(1, 2, "subtract") // should return -1
-calculator(1, 2, "divide") // should return .5
-calculator(1, 2, "multiply") // should return 2
+calculator(1, 2, "add") 
+
+const adder = function(a,b)
+{
+return a+b;
+}
+adder(1,2)
+// should return 3 
+
+calculator(1, 2, "subtract") 
+const subtract = function(a,b)
+{
+return a-b;
+}
+
+subtract(1,2)
+// should return -1
+
+calculator(1, 2, "divide") 
+
+const divide = function (num1,num2)
+{ 
+return num1/num2;
+}
+
+divide(1,2)
+// should return .5
+
+calculator(1, 2, "multiply")  
+
+const multiply = function (num1,num2)
+{ 
+return num1*num2;
+}
+
+multiply(1,2)
+// should return 2
+
 calculator(1, 2, "something else") // should return "calculator can only add, subtract, divide, or multiply
 calculator("cat", 2, "add") // should return "calculator only accepts numbers"
 ```
+
 
 ### Lab: FizzBuzz Function
 
@@ -298,6 +359,25 @@ rainDrop(28) // Plong
 rainDrop(1755) // PlingPlang
 rainDrop(34) // 34
 ```
+
+const rainDrop = function (num)
+ {
+
+ if (num %3==0)
+ {console.log("Pling");}
+
+if (num %5==0)
+{console.log("Plang");}
+
+if (num %7==0)
+{console.log("Plong");}
+  
+
+else { console.log(num); }
+     
+ }
+
+,,,,,
 
 ## Additional Resources
 
