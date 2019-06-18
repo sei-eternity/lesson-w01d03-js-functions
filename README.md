@@ -296,6 +296,13 @@ If it is a multiple of both 3 and 5, return “FizzBuzz” instead of the number
 Otherwise, return the number
 
 ```js
+const fizzBuzz = function(num){
+  if(num % 3 === 0 && num % 5 === 0) {return 'FizzBuzz'}
+  if(num % 3 != 0 && num % 5 != 0) {return num;}
+  if(num % 3 === 0) {return 'Fizz';}
+  if(num % 5 === 0) {return 'Buzz';}
+}
+  
 fizzBuzz(3) // Fizz
 fizzBuzz(15) // FizzBuzz
 rainDrop(7) // 7
